@@ -2,10 +2,10 @@ import times from 'lodash.times';
 
 import type { Bead } from '../types';
 
-const A: Bead = 'A';
-const B: Bead = 'B';
-const C: Bead = 'C';
-const D: Bead = 'D';
+const A: Bead = { char: 'A', color: 'yellow' };
+const B: Bead = { char: 'B', color: 'red' };
+const C: Bead = { char: 'C', color: 'magenta' };
+const D: Bead = { char: 'D', color: 'blue' };
 
 const config = {
   firstColumnIsElevated: true,

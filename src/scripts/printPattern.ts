@@ -15,4 +15,4 @@ if (!patternGenerator) {
   process.exit(0);
 }
 
-console.log(patternToAsciiArt(patternGenerator()));
+console.log(patternToAsciiArt(patternGenerator(), true));
