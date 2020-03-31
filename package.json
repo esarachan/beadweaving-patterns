@@ -1,0 +1,19 @@
+{
+  "name": "beadweaving-patterns",
+  "version": "1.0.0",
+  "description": "Quick patterns for slow crafting",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/esarachan/beadweaving-patterns.git"
+  },
+  "author": "Emma Sarachan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/esarachan/beadweaving-patterns/issues"
+  },
+  "homepage": "https://github.com/esarachan/beadweaving-patterns#readme"
+}
