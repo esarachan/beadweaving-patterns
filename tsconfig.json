@@ -1,0 +1,9 @@
+{
+    "files": [
+        "src/patterns/ombreBeats.ts"
+    ],
+    "compilerOptions": {
+        "noImplicitAny": true,
+        "target": "es5"
+    }
+}

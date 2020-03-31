@@ -4,10 +4,14 @@ Quick patterns for slow crafting
 
 ## Getting started
 
-Install [typescript](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html)
+Install:
 
 ```
-npm install -g typescript
+npm install
 ```
 
-_TODO: investigate transpilers_
+Compile:
+
+```
+npm run compile
+```
