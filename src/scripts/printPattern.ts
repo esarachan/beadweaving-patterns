@@ -1,6 +1,7 @@
 import { program } from 'commander';
 
 import patternGenerators from '../patterns/generators';
+import { patternToAsciiArt } from '../patterns/asciiArt';
 
 program
   .requiredOption('-p, --pattern <string>');
@@ -14,4 +15,4 @@ if (!patternGenerator) {
   process.exit(0);
 }
 
-console.log(patternGenerator());
+console.log(patternToAsciiArt(patternGenerator()));
