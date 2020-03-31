@@ -2,4 +2,4 @@ const pattern = () => {
   return "Hello world";
 };
 
-console.log(pattern());
+export default pattern;

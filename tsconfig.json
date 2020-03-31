@@ -1,6 +1,6 @@
 {
-    "files": [
-        "src/patterns/ombreBeats.ts"
+    "include": [
+        "src/**/*"
     ],
     "compilerOptions": {
         "noImplicitAny": true,

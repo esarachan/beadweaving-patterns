@@ -15,3 +15,9 @@ Compile:
 ```
 npm run compile
 ```
+
+## Print a pattern in the terminal
+
+```
+node dist/scripts/printPattern.js -p <PATTERN>
+```

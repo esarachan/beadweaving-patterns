@@ -18,8 +18,12 @@
   },
   "homepage": "https://github.com/esarachan/beadweaving-patterns#readme",
   "devDependencies": {
+    "@types/node": "^13.9.8",
     "gulp": "^4.0.0",
     "gulp-typescript": "^6.0.0-alpha.1",
     "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "commander": "^5.0.0"
   }
 }
