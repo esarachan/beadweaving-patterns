@@ -9,9 +9,9 @@ const D: Bead = { char: 'D', color: 'blue' };
 
 const config = {
   firstColumnIsElevated: true,
-  columnWavelengths: [3, 4, 5, 6, 7, 8, 7, 6, 5, 4],
-  numRows: 100,
-  beads: [A, B, C, D],
+  columnWavelengths: [4, 5, 6, 5, 4, 3, 4, 5, 6, 5],
+  numRows: 1000,
+  beads: [A, C, D, C],
 };
 
 // TODO: memoize
