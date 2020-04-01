@@ -1,7 +1,9 @@
 import * as React from "react";
 
 import ombreBeats from "../patterns/generators/ombreBeats";
-import PeyotePatternAscii from "./PeyotePatternAscii";
+
+import Header from "./header/Header";
+import PeyotePatternAscii from "./patterns/PeyotePatternAscii";
 
 export interface HelloProps {
   compiler: string;
@@ -9,5 +11,8 @@ export interface HelloProps {
 }
 
 export const Hello = (props: HelloProps) => (
-  <PeyotePatternAscii pattern={ombreBeats()} />
+  <React.Fragment>
+    <Header />
+    <PeyotePatternAscii pattern={ombreBeats()} />
+  </React.Fragment>
 );
