@@ -5,14 +5,11 @@ import ombreBeats from "../patterns/generators/ombreBeats";
 import Header from "./header/Header";
 import PeyotePatternAscii from "./patterns/PeyotePatternAscii";
 
-export interface HelloProps {
-  compiler: string;
-  framework: string;
-}
-
-export const Hello = (props: HelloProps) => (
+const App = () => (
   <React.Fragment>
     <Header />
     <PeyotePatternAscii pattern={ombreBeats()} />
   </React.Fragment>
 );
+
+export default App;
