@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "compile": "node_modules/.bin/gulp",
+    "format": "node_modules/.bin/prettier --write src",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,6 +22,7 @@
     "@types/node": "^13.9.8",
     "gulp": "^4.0.0",
     "gulp-typescript": "^6.0.0-alpha.1",
+    "prettier": "2.0.2",
     "typescript": "^3.8.3"
   },
   "dependencies": {

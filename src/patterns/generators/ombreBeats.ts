@@ -1,10 +1,10 @@
-import times from 'lodash.times';
+import times from "lodash.times";
 
-import type { Bead } from '../types';
+import type { Bead } from "../types";
 
-const orange: Bead = { char: 'O', color: '#fc8200' };
-const magenta: Bead = { char: 'M', color: '#bd0097' };
-const blue: Bead = { char: 'B', color: '#2a00fa' };
+const orange: Bead = { char: "O", color: "#fc8200" };
+const magenta: Bead = { char: "M", color: "#bd0097" };
+const blue: Bead = { char: "B", color: "#2a00fa" };
 
 // TODO: memoize
 class ColumnGenerator {
@@ -29,7 +29,7 @@ class ColumnGenerator {
     this.focusedBeadIsIncreasing = false;
     this.currentSequenceLength = this.wavelength;
     this.isFocusedBeadsTurn = true;
-  }
+  };
 
   generate = () => {
     const column: Bead[] = [];
@@ -59,7 +59,7 @@ class ColumnGenerator {
       if (this.focusedBeadIsIncreasing) {
         this.currentSequenceLength = this.currentSequenceLength + 1;
       } else {
-        this.currentSequenceLength = this.currentSequenceLength - 1
+        this.currentSequenceLength = this.currentSequenceLength - 1;
       }
     }
   };
@@ -74,17 +74,20 @@ class ColumnGenerator {
     return this.beads[this.nextBeadIndex()];
   };
 
-  numBeadsToAdd = () => this.isFocusedBeadsTurn ? this.currentSequenceLength : 1;
+  numBeadsToAdd = () =>
+    this.isFocusedBeadsTurn ? this.currentSequenceLength : 1;
 
   finalBeadIndex = () => this.beads.length - 1;
 
-  previousBeadIndex = () => this.focusedBeadIndex === 0
-    ? this.finalBeadIndex()
-    : this.focusedBeadIndex - 1;
+  previousBeadIndex = () =>
+    this.focusedBeadIndex === 0
+      ? this.finalBeadIndex()
+      : this.focusedBeadIndex - 1;
 
-  nextBeadIndex = () => this.focusedBeadIndex === this.finalBeadIndex()
-    ? 0
-    : this.focusedBeadIndex + 1;
+  nextBeadIndex = () =>
+    this.focusedBeadIndex === this.finalBeadIndex()
+      ? 0
+      : this.focusedBeadIndex + 1;
 }
 
 export default ({
@@ -93,11 +96,12 @@ export default ({
   numRows = 1000,
   beads = [orange, magenta, blue, magenta],
 }) => {
-  const columns = columnWavelengths
-    .map(wavelength => new ColumnGenerator(wavelength, beads, numRows).generate());
+  const columns = columnWavelengths.map((wavelength) =>
+    new ColumnGenerator(wavelength, beads, numRows).generate()
+  );
   const rows = [];
   for (let i = 0; i < numRows; i++) {
-    rows.push(columns.map(column => column[i]));
+    rows.push(columns.map((column) => column[i]));
   }
   return { firstColumnIsElevated, rows };
 };
