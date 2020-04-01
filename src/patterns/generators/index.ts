@@ -1,7 +1,9 @@
 import ombreBeats from "./ombreBeats";
 import type { PeyotePattern } from "../types";
 
-const patterns: { [key: string]: (config: {}) => PeyotePattern } = {
+type PatternGenerator = (config: {}) => PeyotePattern;
+
+const patterns: { [key: string]: PatternGenerator } = {
   ombreBeats,
 };
 
