@@ -4,12 +4,13 @@ import ombreBeats from "../patterns/generators/ombreBeats";
 
 import Header from "./header/Header";
 import PeyotePatternAscii from "./patterns/PeyotePatternAscii";
+import WindowResizeWatcher from "./common/WindowResizeWatcher";
 
 const App = () => (
-  <React.Fragment>
+  <WindowResizeWatcher>
     <Header />
     <PeyotePatternAscii pattern={ombreBeats()} />
-  </React.Fragment>
+  </WindowResizeWatcher>
 );
 
 export default App;
