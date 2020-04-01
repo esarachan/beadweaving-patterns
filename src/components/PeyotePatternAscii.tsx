@@ -1,6 +1,7 @@
 import * as React from "react";
 
 import { patternToAsciiArt } from "../patterns/asciiArt";
+import "./PeyotePatternAscii.css";
 
 import type { PeyotePattern } from "../patterns/types";
 
