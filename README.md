@@ -10,13 +10,15 @@ Install:
 npm install
 ```
 
-Compile:
+## Print a pattern in the terminal
+
+Compile code:
 
 ```
 npx gulp
 ```
 
-## Print a pattern in the terminal
+Run compiled script:
 
 ```
 node dist/scripts/printPattern.js -p <PATTERN>
