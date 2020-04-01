@@ -1,11 +1,12 @@
-import { colorMappings } from './colors';
+import chalk from 'chalk';
+
 import type { Bead, PeyotePattern } from './types';
 
 const isOdd = (x: number) => !!(x % 2);
 const isEven = (x: number) => !isOdd(x);
 
 const beadToString = (bead: Bead, colorful: boolean) => colorful
-  ? colorMappings[bead.color](bead.char)
+  ? chalk.hex(bead.color)(bead.char)
   : bead.char;
 
 const rowToAsciiArt = (row: Bead[], firstColumnIsElevated: boolean, colorful: boolean) => {

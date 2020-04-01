@@ -2,16 +2,15 @@ import times from 'lodash.times';
 
 import type { Bead } from '../types';
 
-const A: Bead = { char: 'A', color: 'yellow' };
-const B: Bead = { char: 'B', color: 'red' };
-const C: Bead = { char: 'C', color: 'magenta' };
-const D: Bead = { char: 'D', color: 'blue' };
+const orange: Bead = { char: 'O', color: '#fc8200' };
+const magenta: Bead = { char: 'M', color: '#bd0097' };
+const blue: Bead = { char: 'B', color: '#2a00fa' };
 
 const config = {
   firstColumnIsElevated: true,
   columnWavelengths: [4, 5, 6, 5, 4, 3, 4, 5, 6, 5],
   numRows: 1000,
-  beads: [A, C, D, C],
+  beads: [orange, magenta, blue, magenta],
 };
 
 // TODO: memoize
