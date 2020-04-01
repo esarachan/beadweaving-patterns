@@ -13,7 +13,7 @@ npm install
 Compile:
 
 ```
-npm run compile
+npx gulp
 ```
 
 ## Print a pattern in the terminal
@@ -27,3 +27,13 @@ You can optionally pass a config file:
 ```
 node dist/scripts/printPattern.js -p ombreBeats -c sample_ombreBeats_config.json
 ```
+
+## Development
+
+This package uses [prettier](https://prettier.io/) for code formatting. To format code from the command line, run:
+
+```
+npx prettier --write src
+```
+
+Or use a prettier editor plugin.

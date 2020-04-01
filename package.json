@@ -4,8 +4,6 @@
   "description": "Quick patterns for slow crafting",
   "main": "index.js",
   "scripts": {
-    "compile": "node_modules/.bin/gulp",
-    "format": "node_modules/.bin/prettier --write src",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
