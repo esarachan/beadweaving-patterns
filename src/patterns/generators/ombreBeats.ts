@@ -95,7 +95,7 @@ export default ({
   columnWavelengths = [4, 5, 6, 5, 4, 3, 4, 5, 6, 5],
   numRows = 1000,
   beads = [orange, magenta, blue, magenta],
-}) => {
+} = {}) => {
   const columns = columnWavelengths.map((wavelength) =>
     new ColumnGenerator(wavelength, beads, numRows).generate()
   );
