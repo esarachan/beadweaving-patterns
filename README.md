@@ -21,3 +21,9 @@ npm run compile
 ```
 node dist/scripts/printPattern.js -p <PATTERN>
 ```
+
+You can optionally pass a config file:
+
+```
+node dist/scripts/printPattern.js -p ombreBeats -c sample_ombreBeats_config.json
+```

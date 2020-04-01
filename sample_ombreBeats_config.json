@@ -1,0 +1,10 @@
+{
+  "firstColumnIsElevated": true,
+  "columnWavelengths": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+  "numRows": 1000,
+  "beads": [
+    { "char": "A", "color": "#ff0000" },
+    { "char": "B", "color": "#00ff00" },
+    { "char": "C", "color": "#0000ff" }
+  ]
+}

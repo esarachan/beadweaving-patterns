@@ -6,13 +6,6 @@ const orange: Bead = { char: 'O', color: '#fc8200' };
 const magenta: Bead = { char: 'M', color: '#bd0097' };
 const blue: Bead = { char: 'B', color: '#2a00fa' };
 
-const config = {
-  firstColumnIsElevated: true,
-  columnWavelengths: [4, 5, 6, 5, 4, 3, 4, 5, 6, 5],
-  numRows: 1000,
-  beads: [orange, magenta, blue, magenta],
-};
-
 // TODO: memoize
 class ColumnGenerator {
   wavelength: number;
@@ -94,8 +87,12 @@ class ColumnGenerator {
     : this.focusedBeadIndex + 1;
 }
 
-export default () => {
-  const { firstColumnIsElevated, columnWavelengths, numRows, beads } = config;
+export default ({
+  firstColumnIsElevated = true,
+  columnWavelengths = [4, 5, 6, 5, 4, 3, 4, 5, 6, 5],
+  numRows = 1000,
+  beads = [orange, magenta, blue, magenta],
+}) => {
   const columns = columnWavelengths
     .map(wavelength => new ColumnGenerator(wavelength, beads, numRows).generate());
   const rows = [];

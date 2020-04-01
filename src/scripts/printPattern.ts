@@ -1,10 +1,12 @@
+import fs from 'fs';
 import { program } from 'commander';
 
 import patternGenerators from '../patterns/generators';
 import { patternToAsciiArt } from '../patterns/asciiArt';
 
 program
-  .requiredOption('-p, --pattern <string>');
+  .requiredOption('-p, --pattern <string>')
+  .option('-c, --config <string>');
 
 program.parse(process.argv);
 
@@ -15,4 +17,7 @@ if (!patternGenerator) {
   process.exit(0);
 }
 
-console.log(patternToAsciiArt(patternGenerator(), true));
+const configPath = program.config;
+const config = configPath ? JSON.parse(fs.readFileSync(configPath, 'UTF8')) : {};
+
+console.log(patternToAsciiArt(patternGenerator(config), true));
