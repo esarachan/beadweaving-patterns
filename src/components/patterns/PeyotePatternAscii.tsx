@@ -6,6 +6,7 @@ import AsciiArt from "../common/AsciiArt";
 
 import type { PeyotePattern } from "../../patterns/types";
 
+// Peyote refers to a bead weaving technique, not a drug!
 type PeyotePatternAsciiProps = {
   pattern: PeyotePattern;
 };
