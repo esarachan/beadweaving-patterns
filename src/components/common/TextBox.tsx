@@ -9,8 +9,14 @@ const HORIZONTAL_BORDER_CHAR = "-";
 const VERTICAL_BORDER_CHAR = "|";
 
 type TextBoxProps = {
+  centeredInChars?: number;
   text: string;
 };
+
+const getCenteredMarginLength = (
+  containerLength: number,
+  contentLength: number
+) => (containerLength - contentLength) / 2;
 
 // Currently only supports a single line of text
 const TextBox = (props: TextBoxProps) => {
@@ -27,8 +33,21 @@ const TextBox = (props: TextBoxProps) => {
     props.text +
     times(HORIZONTAL_PADDING_CHARS, () => " ").join("") +
     VERTICAL_BORDER_CHAR;
+
+  const leftMarginLength = props.centeredInChars
+    ? getCenteredMarginLength(props.centeredInChars, content.length)
+    : 0;
+  const leftMargin = times(leftMarginLength, () => " ").join("");
+
   const asciiArt =
-    topAndBottomBorder + "\n" + content + "\n" + topAndBottomBorder;
+    leftMargin +
+    topAndBottomBorder +
+    "\n" +
+    leftMargin +
+    content +
+    "\n" +
+    leftMargin +
+    topAndBottomBorder;
 
   return <AsciiArt art={asciiArt} />;
 };
